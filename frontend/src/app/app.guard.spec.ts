@@ -35,7 +35,7 @@ describe('LoginGuard', () => {
   }))
 
   it('returns payload from decoding a valid JWT', inject([LoginGuard], (guard: LoginGuard) => {
-  localStorage.setItem('token', 'PASTE_NEW_RS256_TOKEN_HERE');
+  localStorage.setItem('token', 'PASTE_NEW_RS256_TOKEN_HERE')
     expect(guard.tokenDecode()).toEqual({
       sub: '1234567890',
       name: 'John Doe',
